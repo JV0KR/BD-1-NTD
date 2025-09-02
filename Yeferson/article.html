@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Artículo - Búsqueda Académica</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <header class="text-center py-4">
+        <h1>Detalles del Artículo y Proceso de Búsqueda</h1>
+        <button id="themeToggle" class="btn btn-secondary">Cambiar a Modo Oscuro</button>
+    </header>
+
+    <div class="container my-5">
+        <!-- Proceso de búsqueda -->
+        <section class="card mb-4 shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h2 class="h4 mb-0">Proceso de Búsqueda</h2>
+            </div>
+            <div class="card-body">
+                <p>La búsqueda se realizó en la base de datos Scopus, enfocándose en artículos relacionados con datos sintéticos y su aplicación en la investigación biomédica. Se priorizaron publicaciones recientes (2020-2025) en revistas de acceso abierto para garantizar la disponibilidad de los textos completos. Se aplicaron filtros para seleccionar artículos en inglés con relevancia en salud pública y medicina de precisión.</p>
+            </div>
+        </section>
+
+        <!-- Cadenas de búsqueda -->
+        <section class="card mb-4 shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h2 class="h4 mb-0">Cadenas de Búsqueda</h2>
+            </div>
+            <div class="card-body">
+                <ul id="searchTerms">
+                    <li>"synthetic data" AND "biomedical research"</li>
+                    <li>"public health" AND "omics data"</li>
+                    <li>"synthetic data" AND "healthcare" AND "artificial intelligence"</li>
+                    <li>"multiomics" AND "synthetic data" AND "public health"</li>
+                </ul>
+                <div class="input-group mt-2 mb-2">
+                    <input type="text" id="newSearchTerm" class="form-control" placeholder="Ingresa una nueva cadena de búsqueda" aria-label="Nueva cadena de búsqueda">
+                    <button class="btn btn-info" type="button" id="addSearchBtn">Agregar Cadena</button>
+                </div>
+                <div class="input-group mb-2">
+                    <span class="form-control" style="visibility: hidden;"></span>
+                    <button class="btn btn-danger" type="button" id="removeSearchBtn">Borrar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información del artículo -->
+        <section class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h2 class="h4 mb-0">Información del Artículo</h2>
+            </div>
+            <div class="card-body">
+                <p><strong>Título:</strong> Synthetic data production for biomedical research</p>
+                <p><strong>Autores:</strong> Lee, Y. G., Kwak, M.-S., Kim, J. E., Kim, M. S., No, D. U., & Chai, H. Y.</p>
+                <p><strong>Año de publicación:</strong> 2025</p>
+                <p><strong>Fuente:</strong> <i>Osong Public Health and Research Perspectives</i>, <i>16</i>(2), 94–99</p>
+                <p><strong>DOI:</strong> <a href="https://doi.org/10.24171/j.phrp.2024.0335" target="_blank">https://doi.org/10.24171/j.phrp.2024.0335</a></p>
+                
+                <!-- Resumen -->
+                <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#abstract" aria-expanded="false" aria-controls="abstract">
+                    Mostrar/Ocultar Resumen
+                </button>
+                <div class="collapse mt-3" id="abstract">
+                    <div class="card card-body">
+                        <p><strong>Resumen:</strong> Los datos sintéticos, generados mediante técnicas avanzadas de inteligencia artificial (IA), replican las propiedades estadísticas de los conjuntos de datos del mundo real y excluyen la información identificable. Aunque los datos sintéticos no consisten en puntos de datos reales, se derivan de conjuntos de datos originales, lo que permite realizar análisis que arrojan resultados comparables a los obtenidos con datos reales. Los conjuntos de datos sintéticos se evalúan en función de su utilidad, una medida de la eficacia con la que reflejan datos reales con fines analíticos. Este artículo presenta la generación de conjuntos de datos sintéticos a través del Healthcare Big Data Showcase Project (2019-2023). El conjunto de datos original comprende datos multiómicos completos de 400 individuos, incluidos sobrevivientes de cáncer, pacientes con enfermedades crónicas y participantes sanos. Los datos sintéticos facilitan un acceso eficiente y análisis sólidos, sirviendo como una herramienta práctica para la investigación y la educación. Aborda las preocupaciones de privacidad, apoya la investigación de IA y proporciona una base para aplicaciones innovadoras en diversos campos, como la salud pública y la medicina de precisión. © 2025 Agencia de Control y Prevención de Enfermedades de Corea.</p>
+                    </div>
+                </div>
+
+                <!-- Palabras clave -->
+                <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#keywords" aria-expanded="false" aria-controls="keywords">
+                    Mostrar/Ocultar Palabras Clave
+                </button>
+                <div class="collapse mt-3" id="keywords">
+                    <div class="card card-body">
+                        <p><strong>Palabras clave del autor:</strong> Genómica; Datos de registro de vida; Datos ómicos; Salud pública; Datos sintéticos</p>
+                        <p><strong>Palabras clave indexadas (EMTREE):</strong> Artículo; inteligencia artificial; sobreviviente de cáncer; enfermedad crónica; análisis de datos; perfil de expresión génica; Humano; investigación médica; microbioma; multiómica; Secuenciación de ARN</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap 5 JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Script personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
