@@ -1,0 +1,140 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 20px;
+}
+
+body.dark-mode {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+body.dark-mode .card {
+    background-color: #495057;
+    color: #f8f9fa;
+}
+
+body.dark-mode .card-header {
+    background-color: #0056b3;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.dark-mode-toggle {
+    padding: 8px 16px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #5a6268;
+}
+
+.card {
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.article-info {
+    margin-bottom: 15px;
+}
+
+.article-info p {
+    margin: 5px 0;
+}
+
+.keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.keyword {
+    background-color: #e9ecef;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+body.dark-mode .keyword {
+    background-color: #6c757d;
+    color: #f8f9fa;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin: 0;
+}
+
+body.dark-mode h1 {
+    color: #f8f9fa;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+body.dark-mode h3 {
+    color: #5fa8ff;
+}
+
+.abstract {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .card-header h2 {
+        font-size: 1.4rem;
+    }
+    .container {
+        padding: 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}
