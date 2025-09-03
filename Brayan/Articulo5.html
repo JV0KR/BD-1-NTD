@@ -6,84 +6,109 @@
     <title>Búsqueda Académica - Brayan</title>
     <link rel="stylesheet" href="Artstyles.css">
 </head>
-<body id="pageBody">
+<body>
     <header>
-        <h1>Proyecto de Búsqueda Académica</h1>
+        <h1>Búsqueda Académica - Big Data</h1>
         <p><b>Nombre:</b> Brayan Steven Alonso Mikoulits</p>
-        <p><b>Código:</b> 506232740</p>
-        <p><b>Programa:</b> Ingeniería de Sistemas</p>
+        <p><b>Código estudiantil:</b> 506232740</p>
+        <p><b>Carrera:</b> Ingeniería de Sistemas</p>
         <p><b>Materia:</b> Nuevas Tecnologías de Desarrollo</p>
     </header>
 
-    <main class="container">
-        <!-- Artículo principal -->
-        <section class="box">
+    <main>
+        <section class="info-busqueda">
+            <h2>Proceso de Búsqueda</h2>
+            <p>La búsqueda se realizó en la base de datos <b>Scopus</b> (acceso Konrad Lorenz).  
+               Se usaron palabras clave y conectores lógicos:  
+               <code>"big data" AND "artificial intelligence" OR "Data base" OR "Marketing"</code>.  
+               Se limitaron los resultados a <b>Ciencias de la Computación</b> y <b>Ingeniería</b>,  
+               en idiomas inglés y español, artículos publicados entre 2000–2023.  
+               El total de resultados obtenidos fue <b>4485</b>.</p>
+            <p>De esta búsqueda, seleccioné tres artículos relevantes, siendo el primero el artículo principal.</p>
+            <p><a href="https://0310c0ti0-y-https-www-scopus-com.konrad.metaproxy.org/results/results.uri?st1=%22big+data%22+AND+%22artificial+intelligence%22+OR+%22Data+base%22+OR+%22Maeketing%22" target="_blank">Ver resultados en Scopus</a></p>
+        </section>
+
+        <!-- Artículo Principal -->
+        <section id="articulo1" class="box">
             <h2>Artículo Principal</h2>
             <p><b>Título:</b> Optimizing Big Data Analytics for Reliability and Resilience: A Survey of Techniques and Applications</p>
             <p><b>Autores:</b> El Baqqaly, E.-H., & Khaleel, A.H.</p>
             <p><b>Año:</b> 2023</p>
             <p><b>Fuente:</b> Mesopotamian Journal of Big Data, pp. 118–124</p>
-            <p><b>Resumen:</b> Este artículo presenta una revisión de técnicas de Big Data Analytics enfocadas en mejorar la confiabilidad y la resiliencia de sistemas complejos. Analiza diferentes aplicaciones industriales y propone un marco conceptual para el diseño de sistemas de datos robustos. Es relevante porque conecta la analítica con la estabilidad operativa, algo clave en entornos modernos con alto flujo de datos.</p>
+            <p><b>DOI:</b> <a href="https://doi.org/10.58496/MJBD/2023/016" target="_blank">https://doi.org/10.58496/MJBD/2023/016</a></p>
+            <div class="resumen">
+                <p><b>Resumen:</b> Este artículo propone un marco general para que las empresas usen Big Data no solo para tomar decisiones, sino también para construir sistemas confiables y resilientes. Analiza cómo la analítica puede anticipar errores, mejorar la continuidad de servicios y aumentar la seguridad en infraestructuras críticas.</p>
+            </div>
+            <div class="botones">
+                <button onclick="resaltar('articulo1')">Resaltar</button>
+                <button onclick="toggleResumen('articulo1')">Mostrar/Ocultar Resumen</button>
+                <button onclick="cambiarColor('articulo1')">Cambiar Color</button>
+                <button onclick="toggleArticulo('articulo1')">Expandir/Colapsar</button>
+                <button onclick="contarPalabras('articulo1')">Contar Palabras</button>
+                <button onclick="copiarDOI('articulo1')">Copiar DOI</button>
+                <button onclick="zoom('articulo1','in')">Zoom +</button>
+                <button onclick="zoom('articulo1','out')">Zoom -</button>
+                <button onclick="irAArticulo('articulo1')">Ir al Artículo</button>
+            </div>
         </section>
 
-        <!-- Proceso de búsqueda -->
-        <section class="box">
-            <h2>Proceso de Búsqueda</h2>
-            <p>Se navegó en la <b>base de datos Scopus</b> mediante el acceso de la <b>Fundación Universitaria Konrad Lorenz</b>. 
-            La búsqueda se limitó a las áreas de <b>Computer Science</b> y <b>Engineering</b>, en artículos (subtipo: artículo científico) escritos en <b>español</b> e <b>inglés</b>.</p>
-            <p>La estrategia fue construir cadenas de búsqueda con <b>palabras clave</b> y conectores <b>AND</b> y <b>OR</b>:</p>
-            <p class="highlight">"big data" AND "artificial intelligence" OR "Data base" OR "Marketing"</p>
-            <p>Resultados obtenidos: <b>4485 documentos</b>.</p>
-            <p>Se seleccionaron <b>3 artículos</b> de interés, de los cuales se eligió uno como principal.</p>
-            <p><b>Fuente de búsqueda:</b> 
-                <a href="https://0310c0ti0-y-https-www-scopus-com.konrad.metaproxy.org/results/results.uri?st1=%22big+data%22+AND+%22artificial+intelligence%22+OR+%22Data+base%22+OR+%22Maeketing%22&st2=&s=TITLE-ABS-KEY%28%22big+data%22+AND+%22artificial+intelligence%22+OR+%22Data+base%22+OR+%22Maeketing%22%29&limit=10&origin=resultslist&sort=plf-f&src=s&sot=b&sdt=cl&sessionSearchId=20b21c63fc180ad90de32b98a36a1e26&cluster=scosubjabbr%2C%22ENGI%22%2Ct%2C%22COMP%22%2Ct%2Bscosubtype%2C%22ar%22%2Ct%2Bscolang%2C%22Spanish%22%2Ct%2C%22English%22%2Ct&yearFrom=2000&yearTo=2023" target="_blank">
-                    Ver búsqueda en Scopus
-                </a>
-            </p>
+        <!-- Artículo Secundario 1 -->
+        <section id="articulo2" class="box">
+            <h2>Artículo Secundario 1</h2>
+            <p><b>Título:</b> Ensemble Active Learning by Contextual Bandits for AI Incubation in Manufacturing</p>
+            <p><b>Autores:</b> Zeng, Y., Chen, X., & Ran, J.I.N.</p>
+            <p><b>Año:</b> 2023</p>
+            <p><b>Fuente:</b> ACM Transactions on Intelligent Systems and Technology, 15(1), 7</p>
+            <p><b>DOI:</b> <a href="https://doi.org/10.1145/3617536" target="_blank">https://doi.org/10.1145/3617536</a></p>
+            <div class="resumen">
+                <p><b>Resumen:</b> Este trabajo explora cómo el aprendizaje activo combinado con técnicas de IA puede mejorar la eficiencia de los procesos de manufactura. Presenta un modelo que aprende de los errores del sistema y ajusta la producción en tiempo real, reduciendo desperdicios y aumentando la calidad.</p>
+            </div>
+            <div class="botones">
+                <button onclick="resaltar('articulo2')">Resaltar</button>
+                <button onclick="toggleResumen('articulo2')">Mostrar/Ocultar Resumen</button>
+                <button onclick="cambiarColor('articulo2')">Cambiar Color</button>
+                <button onclick="toggleArticulo('articulo2')">Expandir/Colapsar</button>
+                <button onclick="contarPalabras('articulo2')">Contar Palabras</button>
+                <button onclick="copiarDOI('articulo2')">Copiar DOI</button>
+                <button onclick="zoom('articulo2','in')">Zoom +</button>
+                <button onclick="zoom('articulo2','out')">Zoom -</button>
+                <button onclick="irAArticulo('articulo2')">Ir al Artículo</button>
+            </div>
         </section>
 
-        <!-- Tabla de artículos -->
-        <section class="box">
-            <h2>Artículos Seleccionados</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Título</th>
-                        <th>Autores</th>
-                        <th>Año</th>
-                        <th>Fuente</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Challenges of ecocentric sustainable development in agriculture...</td>
-                        <td>Neményi, M., Ambrus, B., Teschner, G., Nyéki, A., Kovács, A.</td>
-                        <td>2023</td>
-                        <td>Progress in Agricultural Engineering Sciences</td>
-                    </tr>
-                    <tr>
-                        <td>Ensemble Active Learning by Contextual Bandits...</td>
-                        <td>Zeng, Y., Chen, X., Ran, J.I.N.</td>
-                        <td>2023</td>
-                        <td>ACM Transactions on Intelligent Systems and Technology</td>
-                    </tr>
-                    <tr>
-                        <td>Optimizing Big Data Analytics for Reliability and Resilience...</td>
-                        <td>El Baqqaly, E.-H., Khaleel, A.H.</td>
-                        <td>2023</td>
-                        <td>Mesopotamian Journal of Big Data</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Botón nuevo -->
-        <section class="box">
-            <h2>Interacción</h2>
-            <p>Pulsa el siguiente botón para resaltar todas las secciones importantes:</p>
-            <button id="resaltarBtn">✨ Resaltar Secciones</button>
+        <!-- Artículo Secundario 2 -->
+        <section id="articulo3" class="box">
+            <h2>Artículo Secundario 2</h2>
+            <p><b>Título:</b> Challenges of Ecocentric Sustainable Development in Agriculture with Special Regard to the Internet of Things (IoT), an ICT Perspective</p>
+            <p><b>Autores:</b> Neményi, M., Ambrus, B., Teschner, G., Nyéki, A., & Kovács, A.</p>
+            <p><b>Año:</b> 2023</p>
+            <p><b>Fuente:</b> Progress in Agricultural Engineering Sciences, 19(1), 113–122</p>
+            <p><b>DOI:</b> <a href="https://doi.org/10.1556/446.2023.00008" target="_blank">https://doi.org/10.1556/446.2023.00008</a></p>
+            <div class="resumen">
+                <p><b>Resumen:</b> Este artículo analiza cómo el uso de IoT y Big Data en agricultura sostenible puede transformar la gestión de cultivos. Destaca que, si bien la tecnología ayuda a optimizar recursos, existen retos en la adopción rural y la necesidad de marcos regulatorios.</p>
+            </div>
+            <div class="botones">
+                <button onclick="resaltar('articulo3')">Resaltar</button>
+                <button onclick="toggleResumen('articulo3')">Mostrar/Ocultar Resumen</button>
+                <button onclick="cambiarColor('articulo3')">Cambiar Color</button>
+                <button onclick="toggleArticulo('articulo3')">Expandir/Colapsar</button>
+                <button onclick="contarPalabras('articulo3')">Contar Palabras</button>
+                <button onclick="copiarDOI('articulo3')">Copiar DOI</button>
+                <button onclick="zoom('articulo3','in')">Zoom +</button>
+                <button onclick="zoom('articulo3','out')">Zoom -</button>
+                <button onclick="irAArticulo('articulo3')">Ir al Artículo</button>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <h2>Bibliografía APA</h2>
+        <ul>
+            <li>El Baqqaly, E.-H., & Khaleel, A. H. (2023). Optimizing Big Data Analytics for Reliability and Resilience: A Survey of Techniques and Applications. <i>Mesopotamian Journal of Big Data, 2023</i>, 118–124. https://doi.org/10.58496/MJBD/2023/016</li>
+            <li>Zeng, Y., Chen, X., & Ran, J. I. N. (2023). Ensemble Active Learning by Contextual Bandits for AI Incubation in Manufacturing. <i>ACM Transactions on Intelligent Systems and Technology, 15</i>(1), 7. https://doi.org/10.1145/3617536</li>
+            <li>Neményi, M., Ambrus, B., Teschner, G., Nyéki, A., & Kovács, A. (2023). Challenges of Ecocentric Sustainable Development in Agriculture with Special Regard to the Internet of Things (IoT), an ICT Perspective. <i>Progress in Agricultural Engineering Sciences, 19</i>(1), 113–122. https://doi.org/10.1556/446.2023.00008</li>
+        </ul>
+    </footer>
 
     <script src="Artscripts.js"></script>
 </body>
