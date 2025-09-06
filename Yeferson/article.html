@@ -3,91 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles del Artículo - Búsqueda Académica</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Estilos personalizados -->
+    <title>Detalles del Artículo y Proceso de Búsqueda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="body">
-    <header class="text-center py-4">
-        <h1>Detalles del Artículo y Proceso de Búsqueda</h1>
-        <button id="themeToggle" class="btn btn-secondary">Cambiar a Modo Oscuro</button>
-    </header>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Detalles del Artículo y Proceso de Búsqueda</h1>
+        <button id="themeToggle" class="btn btn-primary mb-4">Cambiar a Modo Oscuro</button>
 
-    <div class="container my-5">
-        <!-- Proceso de búsqueda -->
-        <section class="card mb-4 shadow-sm">
+        <div class="card mb-4 shadow-sm">
             <div class="card-header bg-primary text-white">
-                <h2 class="h4 mb-0">Proceso de Búsqueda</h2>
+                <h2 class="mb-0">Proceso de Búsqueda</h2>
             </div>
             <div class="card-body">
                 <p>La búsqueda se realizó en la base de datos Scopus, enfocándose en artículos relacionados con datos sintéticos y su aplicación en la investigación biomédica. Se priorizaron publicaciones recientes (2020-2025) en revistas de acceso abierto para garantizar la disponibilidad de los textos completos. Se aplicaron filtros para seleccionar artículos en inglés con relevancia en salud pública y medicina de precisión.</p>
             </div>
-        </section>
+        </div>
 
-        <!-- Cadenas de búsqueda -->
-        <section class="card mb-4 shadow-sm">
+        <div class="card mb-4 shadow-sm">
             <div class="card-header bg-primary text-white">
-                <h2 class="h4 mb-0">Cadenas de Búsqueda</h2>
+                <h2 class="mb-0">Cadenas de Búsqueda</h2>
             </div>
             <div class="card-body">
-                <ul id="searchTerms">
-                    <li>"synthetic data" AND "biomedical research"</li>
-                    <li>"public health" AND "omics data"</li>
-                    <li>"synthetic data" AND "healthcare" AND "artificial intelligence"</li>
-                    <li>"multiomics" AND "synthetic data" AND "public health"</li>
+                <ul id="searchTerms" class="list-group list-group-flush">
+                    <li class="list-group-item">"synthetic data" AND "biomedical research"</li>
+                    <li class="list-group-item">"public health" AND "omics data"</li>
+                    <li class="list-group-item">"synthetic data" AND "healthcare" AND "artificial intelligence"</li>
+                    <li class="list-group-item">"multiomics" AND "synthetic data" AND "public health"</li>
                 </ul>
-                <div class="input-group mt-2 mb-2">
-                    <input type="text" id="newSearchTerm" class="form-control" placeholder="Ingresa una nueva cadena de búsqueda" aria-label="Nueva cadena de búsqueda">
-                    <button class="btn btn-info" type="button" id="addSearchBtn">Agregar Cadena</button>
-                </div>
-                <div class="input-group mb-2">
-                    <span class="form-control" style="visibility: hidden;"></span>
-                    <button class="btn btn-danger" type="button" id="removeSearchBtn">Borrar</button>
+                <div class="input-group mt-3">
+                    <input type="text" id="newSearchTerm" class="form-control" placeholder="Nueva cadena de búsqueda">
+                    <button id="addSearchBtn" class="btn btn-info">Agregar Cadena</button>
+                    <button id="removeSearchBtn" class="btn btn-danger">Borrar</button>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Información del artículo -->
-        <section class="card shadow-sm">
+        <div class="card mb-4 shadow-sm">
             <div class="card-header bg-primary text-white">
-                <h2 class="h4 mb-0">Información del Artículo</h2>
+                <h2 class="mb-0">Información del Artículo</h2>
             </div>
             <div class="card-body">
-                <p><strong>Título:</strong> Synthetic data production for biomedical research</p>
-                <p><strong>Autores:</strong> Lee, Y. G., Kwak, M.-S., Kim, J. E., Kim, M. S., No, D. U., & Chai, H. Y.</p>
-                <p><strong>Año de publicación:</strong> 2025</p>
-                <p><strong>Fuente:</strong> <i>Osong Public Health and Research Perspectives</i>, <i>16</i>(2), 94–99</p>
-                <p><strong>DOI:</strong> <a href="https://doi.org/10.24171/j.phrp.2024.0335" target="_blank">https://doi.org/10.24171/j.phrp.2024.0335</a></p>
-                
-                <!-- Resumen -->
-                <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#abstract" aria-expanded="false" aria-controls="abstract">
-                    Mostrar/Ocultar Resumen
-                </button>
-                <div class="collapse mt-3" id="abstract">
-                    <div class="card card-body">
-                        <p><strong>Resumen:</strong> Los datos sintéticos, generados mediante técnicas avanzadas de inteligencia artificial (IA), replican las propiedades estadísticas de los conjuntos de datos del mundo real y excluyen la información identificable. Aunque los datos sintéticos no consisten en puntos de datos reales, se derivan de conjuntos de datos originales, lo que permite realizar análisis que arrojan resultados comparables a los obtenidos con datos reales. Los conjuntos de datos sintéticos se evalúan en función de su utilidad, una medida de la eficacia con la que reflejan datos reales con fines analíticos. Este artículo presenta la generación de conjuntos de datos sintéticos a través del Healthcare Big Data Showcase Project (2019-2023). El conjunto de datos original comprende datos multiómicos completos de 400 individuos, incluidos sobrevivientes de cáncer, pacientes con enfermedades crónicas y participantes sanos. Los datos sintéticos facilitan un acceso eficiente y análisis sólidos, sirviendo como una herramienta práctica para la investigación y la educación. Aborda las preocupaciones de privacidad, apoya la investigación de IA y proporciona una base para aplicaciones innovadoras en diversos campos, como la salud pública y la medicina de precisión. © 2025 Agencia de Control y Prevención de Enfermedades de Corea.</p>
+                <!-- Article 1 -->
+                <div class="card mb-3 border-light shadow">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="mb-0">Synthetic data production for biomedical research</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Autores:</strong> Lee, Y. G., Kwak, M.-S., Kim, J. E., Kim, M. S., No, D. U., & Chai, H. Y.</p>
+                        <p><strong>Año de publicación:</strong> 2025</p>
+                        <p><strong>Fuente:</strong> Osong Public Health and Research Perspectives, 16(2), 94–99</p>
+                        <p><strong>DOI:</strong> <a href="https://doi.org/10.24171/j.phrp.2024.0335" target="_blank">https://doi.org/10.24171/j.phrp.2024.0335</a></p>
+                        <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#abstract1" aria-expanded="false" aria-controls="abstract1">Mostrar/Ocultar Resumen</button>
+                        <div class="collapse" id="abstract1">
+                            <div class="card card-body">
+                                <p><strong>Resumen:</strong> Los datos sintéticos, generados mediante técnicas avanzadas de inteligencia artificial (IA), replican las propiedades estadísticas de los conjuntos de datos del mundo real y excluyen la información identificable. Aunque los datos sintéticos no consisten en puntos de datos reales, se derivan de conjuntos de datos originales, lo que permite realizar análisis que arrojan resultados comparables a los obtenidos con datos reales. Los conjuntos de datos sintéticos se evalúan en función de su utilidad, una medida de la eficacia con la que reflejan datos reales con fines analíticos. Este artículo presenta la generación de conjuntos de datos sintéticos a través del Healthcare Big Data Showcase Project (2019-2023). El conjunto de datos original comprende datos multiómicos completos de 400 individuos, incluidos sobrevivientes de cáncer, pacientes con enfermedades crónicas y participantes sanos. Los datos sintéticos facilitan un acceso eficiente y análisis sólidos, sirviendo como una herramienta práctica para la investigación y la educación. Aborda las preocupaciones de privacidad, apoya la investigación de IA y proporciona una base para aplicaciones innovadoras en diversos campos, como la salud pública y la medicina de precisión. © 2025 Agencia de Control y Prevención de Enfermedades de Corea.</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#keywords1" aria-expanded="false" aria-controls="keywords1">Mostrar/Ocultar Palabras Clave</button>
+                        <div class="collapse" id="keywords1">
+                            <div class="card card-body">
+                                <p><strong>Palabras clave del autor:</strong> Genómica; Datos de registro de vida; Datos ómicos; Salud pública; Datos sintéticos</p>
+                                <p><strong>Palabras clave indexadas (EMTREE):</strong> Artículo; inteligencia artificial; sobreviviente de cáncer; enfermedad crónica; análisis de datos; perfil de expresión génica; Humano; investigación médica; microbioma; multiómica; Secuenciación de ARN</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Palabras clave -->
-                <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#keywords" aria-expanded="false" aria-controls="keywords">
-                    Mostrar/Ocultar Palabras Clave
-                </button>
-                <div class="collapse mt-3" id="keywords">
-                    <div class="card card-body">
-                        <p><strong>Palabras clave del autor:</strong> Genómica; Datos de registro de vida; Datos ómicos; Salud pública; Datos sintéticos</p>
-                        <p><strong>Palabras clave indexadas (EMTREE):</strong> Artículo; inteligencia artificial; sobreviviente de cáncer; enfermedad crónica; análisis de datos; perfil de expresión génica; Humano; investigación médica; microbioma; multiómica; Secuenciación de ARN</p>
+                <!-- Article 2 -->
+                <div class="card mb-3 border-light shadow">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="mb-0">Revolutionizing eHealth and mHealth: Integrating IoT, Big Data, and AI for Enhanced Patient Monitoring</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Autores:</strong> Shaikh, Mohammad Iqbal; Chakraborty, Debojyoti; Maaz Naimoddin, Shaikh Mohd; Agal, Sanjay</p>
+                        <p><strong>Año de publicación:</strong> 2025</p>
+                        <p><strong>Fuente:</strong> IET Conference Proceedings</p>
+                        <p><strong>DOI:</strong> <a href="https://doi.org/10.1049/icp.2025.1354" target="_blank">https://doi.org/10.1049/icp.2025.1354</a></p>
+                        <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#abstract2" aria-expanded="false" aria-controls="abstract2">Mostrar/Ocultar Resumen</button>
+                        <div class="collapse" id="abstract2">
+                            <div class="card card-body">
+                                <p><strong>Resumen:</strong> Novel advancement in the healthcare domain has been brought about by the incorporation of big data analytics with the Internet of Things (IoT). Which has enabled continuous monitoring of patients, real-time diagnosis, and data-driven decisions. It examines the transformational effect of IoT in paper healthcare, highlighting the function of networks of wireless body sensors (WBSN) and medical super sensors (MSS), which is in collecting and analysing physical, environmental and practical data. The proliferation of IoT devices has produced an enormous volume of strange data, which provides opportunities for the prediction of disease, personal treatment and enhanced patient results. But issues like interoperability, privacy, and data security still exist. Advanced Machine Learning (ML) Algorithms, encompassing long short-term memory (LSTM), Deep Belief Networks (DBN), Convolutional Neural Networks (CNN) extract valuable insight from the complex dataset, improving clinical accuracy, and making it possible crucial for real-time health monitoring. The study highlighted significant progressions, such as a 30% decrease in hospital admissions, 40% increase in data access through cloud platforms, and 85% improvement in clinical accuracy with AI-powered models. Despite these successes, the paper emphasizes the need for scalable, energy-efficient solutions and strong security protocols to resolve the challenges running. © The Institution of Engineering & Technology 2025.</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#keywords2" aria-expanded="false" aria-controls="keywords2">Mostrar/Ocultar Palabras Clave</button>
+                        <div class="collapse" id="keywords2">
+                            <div class="card card-body">
+                                <p><strong>Palabras clave del autor:</strong> Blockchain in Healthcare; Data-Driven Decision Making; eHealth and mHealth; Federated Learning; Health Monitoring; Machine Learning; MSS; WBSN</p>
+                                <p><strong>Palabras clave indexadas:</strong> Advanced Analytics; Big data; Convolutional neural networks; Data mining; Data privacy; Decision making; Deep learning; Diagnosis; Federated learning; Learning algorithms; Metadata; mHealth; Patient monitoring; Patient treatment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="card mb-3 border-light shadow">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="mb-0">Optimizing patient care with big data analytics and machine learning algorithms</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Autores:</strong> Rani, Sarojini; Senthilkumar P.</p>
+                        <p><strong>Año de publicación:</strong> 2025</p>
+                        <p><strong>Fuente:</strong> International Journal on Smart Sensing and Intelligent Systems</p>
+                        <p><strong>DOI:</strong> <a href="https://doi.org/10.2478/ijssis-2025-0023" target="_blank">https://doi.org/10.2478/ijssis-2025-0023</a></p>
+                        <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#abstract3" aria-expanded="false" aria-controls="abstract3">Mostrar/Ocultar Resumen</button>
+                        <div class="collapse" id="abstract3">
+                            <div class="card card-body">
+                                <p><strong>Resumen:</strong> The convergence of big data and machine learning (ML) heralds transformative capabilities in healthcare, addressing obstacles in utilizing extensive, sophisticated datasets from electronic health records (EHRs), medical imaging, and wearable technology. This research aims to improve symptomatic accuracy, personalize treatments, and optimize operational efficiency through prognosis ML models while addressing critical concerns such as data security, scalability, and interpretation. By integrating a range of datasets and reconstruct sophisticated algorithms like graph neural networks (GNNs) and reinforcement learning (RL) with healthcare restraints, the research study achieved disease prediction accuracy prodigious 90% and a 25% boost in patient adherence to treatment regimen. Privacy defense methods, including federated learning (FL), ensured compliance with protected health information regulations, while foremost execution showed a 30% improvement in the operational efficiency of the healthcare system. The outcomes emphasize the crucial integration of technological advancements with clinical pertinence, establishing a foundation for secure, scalable, and patient-oriented healthcare system solutions that enhance outcomes and drive standardized improvements. © 2025 Sarojini Rani et al., published by Sciendo.</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#keywords3" aria-expanded="false" aria-controls="keywords3">Mostrar/Ocultar Palabras Clave</button>
+                        <div class="collapse" id="keywords3">
+                            <div class="card card-body">
+                                <p><strong>Palabras clave del autor:</strong> Big Data; Clinical Innovation; Data Privacy; Disease Prediction; Federated Learning; HealthCare; Operational Efficiency</p>
+                                <p><strong>Palabras clave indexadas:</strong> Advanced Analytics; Big data; Convolutional neural networks; Data mining; Data privacy; Decision making; Deep learning; Diagnosis; Federated learning; Learning algorithms; Metadata; mHealth; Patient monitoring; Patient treatment</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-
-    <!-- Bootstrap 5 JS y dependencias -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Script personalizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
