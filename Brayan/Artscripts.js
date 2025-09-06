@@ -21,7 +21,7 @@ function cambiarColor(idArticulo) {
     const colorRandom = colores[Math.floor(Math.random() * colores.length)];
     articulo.style.backgroundColor = colorRandom;
 }
-
+//comentario
 
 // 🔹 Contar palabras del resumen
 function contarPalabras(idArticulo) {
