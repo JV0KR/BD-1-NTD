@@ -12,6 +12,7 @@ body.dark-mode {
 body.dark-mode .card {
     background-color: #495057;
     color: #f8f9fa;
+    border-color: #6c757d;
 }
 
 body.dark-mode .card-header {
@@ -25,12 +26,21 @@ body.dark-mode .card-header {
 .card {
     border-radius: 10px;
     border: 1px solid #dee2e6;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card-header {
     background-color: #007bff;
     color: white;
     font-weight: bold;
+}
+
+.card-header.bg-info {
+    background-color: #17a2b8;
 }
 
 .btn-primary, .btn-info, .btn-danger {
@@ -47,11 +57,16 @@ body.dark-mode .card-header {
 
 .btn-info, .btn-danger {
     flex: 0 0 auto;
-    width: 150px; /* Tamaño fijo para ambos botones */
+    width: 150px;
 }
 
-.card-body ul {
-    padding-left: 20px;
+.card-body ul.list-group {
+    padding-left: 0;
+}
+
+.card-body .list-group-item {
+    border: none;
+    padding: 10px 0;
 }
 
 .input-group .form-control {
@@ -75,6 +90,15 @@ body.dark-mode h1 {
     color: #f8f9fa;
 }
 
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-body p {
+    margin-bottom: 0.75rem;
+}
+
 @media (max-width: 576px) {
     h1 {
         font-size: 1.8rem;
@@ -82,10 +106,13 @@ body.dark-mode h1 {
     .card-header h2 {
         font-size: 1.4rem;
     }
+    .card-header h3 {
+        font-size: 1.2rem;
+    }
     .container {
         padding: 15px;
     }
     .btn-info, .btn-danger {
-        width: 120px; /* Tamaño reducido para pantallas pequeñas */
+        width: 120px;
     }
 }

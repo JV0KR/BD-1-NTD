@@ -1,18 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("btnDestacar");
+// Mostrar alerta de bienvenida
+window.onload = function () {
+  alert("Bienvenido al sitio de búsqueda académica 📚");
+}
 
-    btn.addEventListener("click", function () {
-        const sections = document.querySelectorAll("section");
-        sections.forEach((section, index) => {
-            section.style.backgroundColor = index % 2 === 0 ? "#e0f7fa" : "#fff3cd";
-            section.style.borderLeft = "5px solid #28a745";
-        });
+// Función para resaltar secciones
+function resaltarSecciones() {
+  const secciones = document.querySelectorAll("section");
+  secciones.forEach(sec => {
+    sec.style.borderColor = "#ff6600";
+    sec.style.backgroundColor = "#fff8e6";
+  });
+}
 
-        btn.textContent = "¡Información resaltada!";
-        btn.classList.remove("btn-outline-primary");
-        btn.classList.add("btn-success");
+// Función para alternar visibilidad de resúmenes
+function toggleResumenes() {
+  const resumenes = document.querySelectorAll(".resumen");
+  resumenes.forEach(res => {
+    res.style.display = (res.style.display === "none") ? "block" : "none";
+  });
+}
 
-        // Deshabilita el botón después de hacer clic
-        btn.disabled = true;
-    });
-});
+// Función para volver al estilo original
+function restaurarEstilos() {
+  const secciones = document.querySelectorAll("section");
+  secciones.forEach(sec => {
+    sec.style.borderColor = "#0066cc";
+    sec.style.backgroundColor = "#ffffff";
+  });
+}

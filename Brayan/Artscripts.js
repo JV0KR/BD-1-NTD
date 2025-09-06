@@ -23,6 +23,7 @@ function cambiarColor(idArticulo) {
 }
 //comentario
 
+
 // 🔹 Contar palabras del resumen
 function contarPalabras(idArticulo) {
     const resumen = document.querySelector(`#${idArticulo} .resumen`).innerText;
